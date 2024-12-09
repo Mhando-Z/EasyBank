@@ -4,8 +4,17 @@ import { MdAddShoppingCart } from "react-icons/md";
 // icons imports
 import { AiTwotonePlusCircle } from "react-icons/ai";
 import { RxMinusCircled } from "react-icons/rx";
+const { v4: uuidv4 } = require("uuid");
 
-function ProductCard({ data }) {
+function ProductCard({ data, setSelect, addData }) {
+  const handleSelection = (Pdata) => {
+    const Sdata = {
+      id: uuidv4(),
+      ...Pdata,
+    };
+    setSelect(Sdata);
+  };
+
   return (
     <div className="">
       <div className="flex flex-col items-center justify-center">
@@ -23,12 +32,19 @@ function ProductCard({ data }) {
             <div className="px-2 font-bold text-white text-md">
               <RxMinusCircled className="text-lg cursor-pointer" />
             </div>
+
             <div className="font-bold text-white">
               <p>1</p>
             </div>
 
-            <div className="px-2 font-bold text-white text-md">
-              <AiTwotonePlusCircle className="text-lg cursor-pointer" />
+            <div
+              onClick={addData}
+              className="px-2 font-bold text-white text-md"
+            >
+              <AiTwotonePlusCircle
+                onClick={() => handleSelection(data)}
+                className="text-lg cursor-pointer"
+              />
             </div>
           </div>
         </div>
