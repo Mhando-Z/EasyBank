@@ -4,6 +4,7 @@ import { RxCrossCircled } from "react-icons/rx";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import data from "../lib/datas";
 import { openDB } from "idb";
+import { motion } from "framer-motion";
 
 const dbPromise = openDB("MyDatabase", 1, {
   upgrade(db) {
@@ -106,13 +107,18 @@ function Home() {
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
           {data?.map((dt, index) => {
             return (
-              <div key={index}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 * index }}
+                key={index}
+              >
                 <ProductCard
                   addData={addData}
                   setSelect={setSelect}
                   data={dt}
                 />
-              </div>
+              </motion.div>
             );
           })}
         </div>
@@ -168,9 +174,12 @@ function Home() {
                 <h1 className="text-3xl font-bold">Order Confirmed</h1>
               </div>
               <div className="flex flex-col gap-3 mt-5 h-[400px] overflow-y-auto ">
-                {cartData?.map((dt) => {
+                {cartData?.map((dt, index) => {
                   return (
-                    <div
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 * index }}
                       key={dt.id}
                       className="flex items-center justify-between"
                     >
@@ -187,7 +196,7 @@ function Home() {
                           className="text-xl cursor-pointer hover:text-red-600"
                         />
                       </div>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
