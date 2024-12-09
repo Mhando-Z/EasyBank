@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../Components/ProductCard";
 import { RxCrossCircled } from "react-icons/rx";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import data from "../lib/datas";
 import { openDB } from "idb";
 
@@ -68,6 +69,10 @@ function Home() {
     setShow(true);
   };
 
+  const handleClear = () => {
+    setShow(false);
+  };
+
   if (!data || data?.length === 0) {
     return (
       <div className="container flex items-center justify-center min-h-screen mx-auto">
@@ -133,7 +138,7 @@ function Home() {
               <h1 className="font-medium">Order Total</h1>
               <h1 className="font-bold">$ {total}</h1>
             </div>
-            <div className="items-center w-full py-2 mt-4 text-center text-white bg-red-600 rounded-3xl ">
+            <div className="items-center w-full py-2 mt-4 text-center text-white bg-red-600 cursor-pointer rounded-3xl ">
               <h1 onClick={handleShow} className="font-bold">
                 Confirm Order
               </h1>
@@ -143,7 +148,50 @@ function Home() {
       </div>
       {show && (
         <>
-          <div className="absolute top-0 bottom-0 left-0 right-0 bg-black bg-opacity-35"></div>
+          <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center min-h-screen bg-black bg-opacity-35">
+            <div className="w-[500px] p-10 bg-white rounded-2xl">
+              <div className="flex flex-col">
+                <IoCheckmarkCircleOutline className="text-5xl text-green-600" />
+                <h1 className="text-3xl font-bold">Order Confirmed</h1>
+              </div>
+              <div className="flex flex-col gap-3 mt-5 h-[400px] overflow-y-auto ">
+                {cartData?.map((dt) => {
+                  return (
+                    <div
+                      key={dt.id}
+                      className="flex items-center justify-between"
+                    >
+                      <div>
+                        <img src={dt?.image} alt="poster" className="h-20" />
+                      </div>
+                      <div>
+                        <h1 className="font-bold ">{dt.name}</h1>
+                        <p>$ {dt?.price}</p>
+                      </div>
+                      <div>
+                        <RxCrossCircled
+                          onClick={() => deleteData(dt?.id)}
+                          className="text-xl cursor-pointer hover:text-red-600"
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              {/* price confirmation button */}
+              <div className="bg-white mt-5 px-5 h-[100px] border-t border-slate-500">
+                <div className="flex flex-row items-center justify-between mt-3">
+                  <h1 className="font-medium">Order Total</h1>
+                  <h1 className="font-bold">$ {total}</h1>
+                </div>
+                <div className="items-center w-full py-2 mt-4 text-center text-white bg-red-600 cursor-pointer rounded-3xl ">
+                  <h1 onClick={handleClear} className="font-bold">
+                    Start new Order
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
         </>
       )}
     </div>
