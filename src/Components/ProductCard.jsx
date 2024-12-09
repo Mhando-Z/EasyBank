@@ -10,10 +10,22 @@ function ProductCard({ data }) {
           alt="picha"
           className="object-cover rounded-xl"
         />
-        <div className="flex mt-[-20px] justify-center  border-2 border-gray-400 items-center w-[160px]  rounded-3xl px-2 py-2 bg-white ">
-          <div className="flex items-center gap-1 ">
+        <div className="flex group hover:bg-red-600 mt-[-20px] justify-center  border-2 border-gray-400 items-center w-[160px]  rounded-3xl px-2 py-2 bg-white ">
+          <div className="flex items-center gap-1 cursor-pointer group-hover:hidden">
             <MdAddShoppingCart className="text-orange-600" />
             <h1 className="font-bold">Add to Cart</h1>
+          </div>
+          <div className="flex-row items-center justify-between hidden w-full group-hover:flex">
+            <div className="px-2 font-bold text-white border border-gray-200 rounded-full text-md">
+              <p>-</p>
+            </div>
+            <div className="font-bold text-white">
+              <p>1</p>
+            </div>
+
+            <div className="px-2 font-bold text-white border border-gray-200 rounded-full text-md">
+              <p>+</p>
+            </div>
           </div>
         </div>
       </div>
