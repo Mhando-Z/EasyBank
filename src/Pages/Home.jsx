@@ -69,7 +69,20 @@ function Home() {
     setShow(true);
   };
 
+  // clear all data from indexdb
+  const clearAllData = async () => {
+    const db = await dbPromise;
+    try {
+      await db.clear("myStore");
+      console.log("All data cleared successfully.");
+    } catch (error) {
+      console.error("Failed to clear all data:", error);
+    }
+  };
+
   const handleClear = () => {
+    clearAllData();
+    getAllData();
     setShow(false);
   };
 
