@@ -95,8 +95,8 @@ function Home() {
   }
   return (
     <div
-      className={`relative flex flex-col min-h-screen px-5 xl:container xl:mx-auto ${
-        show ? "" : "md:mt-5"
+      className={`relative flex flex-col min-h-screen px-5  ${
+        show ? "" : "md:mt-5 xl:container xl:mx-auto"
       }  `}
     >
       <div className="px-6 mb-10">
