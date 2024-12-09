@@ -15,6 +15,7 @@ const dbPromise = openDB("MyDatabase", 1, {
 function Home() {
   const [selected, setSelect] = useState([]);
   const [cartData, setCart] = useState([]);
+  const [show, setShow] = useState(false);
 
   // total sum of all items in cart
   const total = cartData.reduce((acc, item) => acc + item.price, 0);
@@ -62,6 +63,11 @@ function Home() {
     }
   };
 
+  // set show coursel
+  const handleShow = () => {
+    setShow(true);
+  };
+
   if (!data || data?.length === 0) {
     return (
       <div className="container flex items-center justify-center min-h-screen mx-auto">
@@ -70,7 +76,11 @@ function Home() {
     );
   }
   return (
-    <div className="flex flex-col min-h-screen px-5 xl:container xl:mx-auto md:mt-5">
+    <div
+      className={`relative flex flex-col min-h-screen px-5 xl:container xl:mx-auto ${
+        show ? "" : "md:mt-5"
+      }  `}
+    >
       <div className="px-6 mb-10">
         <h1 className="text-4xl font-bold">Desserts</h1>
       </div>
@@ -124,11 +134,18 @@ function Home() {
               <h1 className="font-bold">$ {total}</h1>
             </div>
             <div className="items-center w-full py-2 mt-4 text-center text-white bg-red-600 rounded-3xl ">
-              <h1 className="font-bold">Confirm Order</h1>
+              <h1 onClick={handleShow} className="font-bold">
+                Confirm Order
+              </h1>
             </div>
           </div>
         </div>
       </div>
+      {show && (
+        <>
+          <div className="absolute top-0 bottom-0 left-0 right-0 bg-black bg-opacity-35"></div>
+        </>
+      )}
     </div>
   );
 }
