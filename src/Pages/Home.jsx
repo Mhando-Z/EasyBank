@@ -95,75 +95,75 @@ function Home() {
     );
   }
   return (
-    <div
-      className={`relative flex flex-col min-h-screen px-5  ${
-        show ? "" : "md:mt-5 xl:container xl:mx-auto"
-      }  `}
-    >
-      <div className="px-6 mb-10">
-        <h1 className="text-4xl font-bold">Desserts</h1>
-      </div>
-      <div className="flex flex-col gap-10 px-6 md:flex-row">
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-          {data?.map((dt, index) => {
-            return (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 * index }}
-                key={index}
-              >
-                <ProductCard
-                  addData={addData}
-                  setSelect={setSelect}
-                  data={dt}
-                />
-              </motion.div>
-            );
-          })}
+    <div className="relative">
+      <div
+        className={`relative flex xl:container xl:mx-auto md:mt-10 flex-col min-h-screen px-5`}
+      >
+        <div className="px-6 mb-10">
+          <h1 className="text-4xl font-bold">Desserts</h1>
         </div>
-        {/* cart section */}
-        <div className="flex w-[550px] flex-col gap-y-5">
-          <div className="bg-white flex flex-col  h-[500px] overflow-y-auto rounded-2xl px-5 ">
-            <h1 className="py-5 text-2xl font-bold text-orange-600 bg-white ">
-              Your Cart ({cartData?.length})
-            </h1>
-
-            <div className="flex flex-col gap-3 mt-5 ">
-              {cartData?.map((dt, index) => {
-                return (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3 * index }}
-                    key={dt.id}
-                    className="flex items-center justify-between"
-                  >
-                    <div>
-                      <h1 className="font-bold ">{dt.name}</h1>
-                      <p>$ {dt?.price}</p>
-                    </div>
-                    <div>
-                      <RxCrossCircled
-                        onClick={() => deleteData(dt?.id)}
-                        className="text-xl cursor-pointer hover:text-red-600"
-                      />
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+        <div className="flex flex-col gap-10 px-6 md:flex-row">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+            {data?.map((dt, index) => {
+              return (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 * index }}
+                  key={index}
+                >
+                  <ProductCard
+                    addData={addData}
+                    setSelect={setSelect}
+                    data={dt}
+                  />
+                </motion.div>
+              );
+            })}
           </div>
-          {/* total sum */}
-          <div className="bg-white px-5 h-[100px] border-t border-slate-500 mt-2">
-            <div className="flex flex-row items-center justify-between mt-3">
-              <h1 className="font-medium">Order Total</h1>
-              <h1 className="font-bold">$ {total}</h1>
-            </div>
-            <div className="items-center w-full py-2 mt-4 text-center text-white bg-red-600 cursor-pointer rounded-3xl ">
-              <h1 onClick={handleShow} className="font-bold">
-                Confirm Order
+          {/* cart section */}
+          <div className="flex w-[550px] flex-col gap-y-5">
+            <div className="bg-white flex flex-col  h-[500px] overflow-y-auto rounded-2xl px-5 ">
+              <h1 className="py-5 text-2xl font-bold text-orange-600 bg-white ">
+                Your Cart ({cartData?.length})
               </h1>
+
+              <div className="flex flex-col gap-3 mt-5 ">
+                {cartData?.map((dt, index) => {
+                  return (
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 * index }}
+                      key={dt.id}
+                      className="flex items-center justify-between"
+                    >
+                      <div>
+                        <h1 className="font-bold ">{dt.name}</h1>
+                        <p>$ {dt?.price}</p>
+                      </div>
+                      <div>
+                        <RxCrossCircled
+                          onClick={() => deleteData(dt?.id)}
+                          className="text-xl cursor-pointer hover:text-red-600"
+                        />
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+            {/* total sum */}
+            <div className="bg-white px-5 h-[100px] border-t border-slate-500 mt-2">
+              <div className="flex flex-row items-center justify-between mt-3">
+                <h1 className="font-medium">Order Total</h1>
+                <h1 className="font-bold">$ {total}</h1>
+              </div>
+              <div className="items-center w-full py-2 mt-4 text-center text-white bg-red-600 cursor-pointer rounded-3xl ">
+                <h1 onClick={handleShow} className="font-bold">
+                  Confirm Order
+                </h1>
+              </div>
             </div>
           </div>
         </div>
