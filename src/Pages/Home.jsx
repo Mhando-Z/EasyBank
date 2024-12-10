@@ -130,9 +130,12 @@ function Home() {
             </h1>
 
             <div className="flex flex-col gap-3 mt-5 ">
-              {cartData?.map((dt) => {
+              {cartData?.map((dt, index) => {
                 return (
-                  <div
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 * index }}
                     key={dt.id}
                     className="flex items-center justify-between"
                   >
@@ -146,7 +149,7 @@ function Home() {
                         className="text-xl cursor-pointer hover:text-red-600"
                       />
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
