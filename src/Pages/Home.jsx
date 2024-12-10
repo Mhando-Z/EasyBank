@@ -173,7 +173,15 @@ function Home() {
           <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center min-h-screen bg-black bg-opacity-35">
             <div className="w-[500px] p-10 bg-white rounded-2xl">
               <div className="flex flex-col">
-                <IoCheckmarkCircleOutline className="text-5xl text-green-600" />
+                <div className="flex flex-row items-center justify-between w-full">
+                  <IoCheckmarkCircleOutline className="text-5xl text-green-600" />
+                  <button
+                    onClick={() => setShow(false)}
+                    className="px-4 py-1 text-xs font-bold text-white bg-red-600 rounded-3xl"
+                  >
+                    cancel
+                  </button>
+                </div>
                 <h1 className="text-3xl font-bold">Order Confirmed</h1>
               </div>
               <div className="flex flex-col gap-3 mt-5 h-[400px] overflow-y-auto ">
