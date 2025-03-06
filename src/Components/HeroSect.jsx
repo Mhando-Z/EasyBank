@@ -111,7 +111,7 @@ function HeroSect() {
           <h1 className="text-6xl font-bold text-white">
             Boost your links today{" "}
           </h1>
-          <button className="px-10 py-3 mt-4 font-bold text-white hover:bg-cyan-600 rounded-3xl bg-cyan-400">
+          <button className="px-10 py-3 mt-6 text-xl font-bold text-white hover:bg-cyan-600 rounded-3xl bg-cyan-400">
             get started
           </button>
         </div>
