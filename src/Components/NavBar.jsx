@@ -3,7 +3,7 @@ import logo from "../assets/images/logo.svg";
 
 function NavBar() {
   return (
-    <div className="fixed z-50 w-full mt-5">
+    <div className="fixed z-50 w-full bg-white">
       <div className="flex flex-row items-center justify-between w-full px-5 py-3 lg:container lg:mx-auto lg:px-0">
         {/* logo and nav links*/}
         <div className="flex items-center gap-x-5">
