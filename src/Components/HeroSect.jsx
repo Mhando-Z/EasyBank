@@ -3,6 +3,8 @@ import BoxCard from "./BoxCard";
 // image import
 import mage from "../assets/images/illustration-working.svg";
 import mage2 from "../assets/images/bg-shorten-desktop.svg";
+import mage3 from "../assets/images/bg-boost-desktop.svg";
+// icon import
 import icon1 from "../assets/images/icon-detailed-records.svg";
 import icon2 from "../assets/images/icon-brand-recognition.svg";
 import icon3 from "../assets/images/icon-fully-customizable.svg";
@@ -99,7 +101,21 @@ function HeroSect() {
         </div>
       </div>
       {/* fourth section */}
-      <div></div>
+      <div className="h-[330px] relative bg-blue-950">
+        <img
+          src={mage3}
+          alt="stricly pic"
+          className="object-cover w-full h-full "
+        />
+        <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center ">
+          <h1 className="text-6xl font-bold text-white">
+            Boost your links today{" "}
+          </h1>
+          <button className="px-10 py-3 mt-4 font-bold text-white hover:bg-cyan-600 rounded-3xl bg-cyan-400">
+            get started
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
