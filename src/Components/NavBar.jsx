@@ -32,7 +32,7 @@ function NavBar() {
         </div>
         {/* humbuger icon */}
 
-        <div>
+        <div className="md:hidden">
           <IoMdMenu onClick={handleClick} className="text-3xl md:hidden" />
         </div>
 
