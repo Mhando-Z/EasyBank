@@ -34,20 +34,20 @@ const BoxCard = ({ icon, title, description }) => {
   };
 
   return (
-    <div className="flex items-center justify-center py-4 ">
+    <div className="flex items-center justify-center px-5 py-4 md:px-2 ">
       <motion.div
-        className="flex flex-col w-full max-w-6xl gap-6 md:flex-row md:gap-4"
+        className="flex flex-col gap-6 text-center md:flex-row md:gap-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.div
-          className="relative flex-1 p-10 bg-white rounded-lg shadow-lg"
+          className="relative flex flex-col items-center justify-center flex-1 p-10 bg-white rounded-lg shadow-lg md:block"
           variants={cardVariants}
           whileHover="hover"
         >
           <motion.div
-            className="absolute flex items-center justify-center w-16 h-16 text-2xl rounded-full bg-blue-950 text-cyan-400 -top-8 left-6"
+            className="absolute flex items-center justify-center w-16 h-16 text-2xl rounded-full bg-blue-950 text-cyan-400 -top-8 md:left-6"
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.6 }}
           >

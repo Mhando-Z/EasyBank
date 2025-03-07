@@ -54,7 +54,7 @@ function HeroSect() {
       </div>
       {/* third section */}
       <div className="-mt-12 bg-gray-200 ">
-        <div className="flex flex-col items-center gap-2 mt-32">
+        <div className="flex flex-col items-center gap-2 px-5 mt-32 mb-16 text-center md:mb-0">
           <h1 className="text-4xl font-bold">Advanced Statistics </h1>
           <p className="max-w-md text-gray-400 md:text-center">
             frack how your tinks are pertamning dorast the web with our
@@ -69,7 +69,7 @@ function HeroSect() {
           </div>
 
           {/* cards */}
-          <div className="absolute top-0 bottom-0 flex flex-col items-center justify-between w-full h-full gap-10 md:flex-row">
+          <div className="absolute top-0 bottom-0 flex flex-col items-center justify-between h-full gap-10 md:flex-row">
             {/* first cards */}
             <BoxCard
               icon={icon2}
