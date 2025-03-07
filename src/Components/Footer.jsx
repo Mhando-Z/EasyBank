@@ -14,7 +14,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-16 text-white bg-gray-900">
+    <footer className="py-16 text-center text-white bg-gray-900">
       <div className="container flex flex-col justify-between px-6 mx-auto md:flex-row">
         {/* Logo */}
         <div className="mb-8 md:mb-0">
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="flex gap-4 mt-8 md:mt-0">
+        <div className="flex items-center justify-center gap-4 mt-8 md:mt-0">
           <a
             href="#facebook"
             className="transition-colors duration-200 hover:text-blue-400"

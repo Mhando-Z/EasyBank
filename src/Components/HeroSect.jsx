@@ -53,7 +53,7 @@ function HeroSect() {
         </div>
       </div>
       {/* third section */}
-      <div className="-mt-12 bg-gray-200 h-[1280px] ">
+      <div className="-mt-12 bg-gray-200 h-[1280px] md:h-full ">
         <div className="flex flex-col items-center gap-2 px-5 mt-32 mb-16 text-center md:mb-0">
           <h1 className="text-4xl font-bold">Advanced Statistics </h1>
           <p className="max-w-md text-gray-400 md:text-center">
@@ -108,8 +108,8 @@ function HeroSect() {
           alt="stricly pic"
           className="object-cover w-full h-full "
         />
-        <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center ">
-          <h1 className="text-6xl font-bold text-white">
+        <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center ">
+          <h1 className="text-3xl font-bold text-white md:text-6xl">
             Boost your links today{" "}
           </h1>
           <button className="px-10 py-3 mt-6 text-xl font-bold text-white hover:bg-cyan-600 rounded-3xl bg-cyan-400">
