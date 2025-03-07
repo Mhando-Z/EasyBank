@@ -65,6 +65,7 @@ function HeroSect() {
           {/* horizontal line */}
           <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center">
             <div className="hidden w-full h-3 bg-cyan-500 md:flex"></div>
+            <div className="flex w-3 h-full md:hidden bg-cyan-500"></div>
           </div>
 
           {/* cards */}
