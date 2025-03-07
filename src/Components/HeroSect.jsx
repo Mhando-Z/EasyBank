@@ -116,7 +116,7 @@ function HeroSect() {
         </div>
       </div>
       {/* third section */}
-      <div className="-mt-12 bg-gray-200 h-[1930px] md:h-full ">
+      <div className="-mt-12 bg-gray-200 h-[2010px] md:h-full ">
         <div className="px-4 mt-20 space-y-4 md:container md:mx-auto md:px-0">
           {shortenedLinks.map((link, index) => (
             <motion.div
