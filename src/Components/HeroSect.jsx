@@ -53,7 +53,7 @@ function HeroSect() {
         </div>
       </div>
       {/* third section */}
-      <div className="-mt-12 bg-gray-200 ">
+      <div className="-mt-12 bg-gray-200 h-[1280px] ">
         <div className="flex flex-col items-center gap-2 px-5 mt-32 mb-16 text-center md:mb-0">
           <h1 className="text-4xl font-bold">Advanced Statistics </h1>
           <p className="max-w-md text-gray-400 md:text-center">
@@ -102,7 +102,7 @@ function HeroSect() {
         </div>
       </div>
       {/* fourth section */}
-      <div className="h-[330px] relative mt-20 md:mt-0 bg-blue-950">
+      <div className="h-[330px] relative bg-blue-950">
         <img
           src={mage3}
           alt="stricly pic"
