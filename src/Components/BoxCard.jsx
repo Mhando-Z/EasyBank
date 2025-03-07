@@ -36,7 +36,7 @@ const BoxCard = ({ icon, title, description }) => {
   return (
     <div className="flex items-center justify-center px-5 py-4 md:px-0 ">
       <motion.div
-        className="flex flex-col gap-6 text-center md:flex-row md:gap-4"
+        className="flex flex-col gap-6 text-center md:text-left md:flex-row md:gap-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
