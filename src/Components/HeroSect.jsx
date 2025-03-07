@@ -62,26 +62,62 @@ function HeroSect() {
     <div className="flex flex-col mt-20 ">
       <div className="flex flex-col px-4 md:container md:mx-auto md:px-0 ">
         {/* first section */}
-        <div className="flex flex-col-reverse items-center justify-between md:flex-row ">
+        <div className="flex flex-col-reverse items-center justify-between md:flex-row">
           {/* text section */}
-          <div className="flex flex-col w-full mt-10 text-center md:text-left ">
-            <h1 className="max-w-md text-5xl font-bold md:text-6xl ">
+          <motion.div
+            className="flex flex-col w-full mt-10 text-center md:text-left"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.h1
+              className="max-w-md text-5xl font-bold md:text-6xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.7 }}
+            >
               More than just shorter links
-            </h1>
-            <p className="max-w-md mt-3 text-gray-400">
+            </motion.h1>
+            <motion.p
+              className="max-w-md mt-3 text-gray-400"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.7 }}
+            >
               Build your brand's recognition and get detailed insights on how
               your links are performing
-            </p>
-            <div>
-              <button className="py-2 mt-4 font-bold text-white hover:bg-cyan-600 px-7 rounded-3xl bg-cyan-300">
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.7 }}
+            >
+              <motion.button
+                className="py-2 mt-4 font-bold text-white hover:bg-cyan-600 px-7 rounded-3xl bg-cyan-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 get started
-              </button>
-            </div>
-          </div>
+              </motion.button>
+            </motion.div>
+          </motion.div>
+
           {/* image section */}
-          <div className="w-full">
-            <img src={mage} alt="shortly pic" className="w-full h-auto" />
-          </div>
+          <motion.div
+            className="w-full"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.img
+              src={mage}
+              alt="shortly pic"
+              className="w-full h-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+            />
+          </motion.div>
         </div>
         {/* second section */}
         <div className="relative h-[180px] md:h-[120px]  rounded mt-20  bg-blue-950 ">
