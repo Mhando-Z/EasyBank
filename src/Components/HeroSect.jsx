@@ -102,7 +102,7 @@ function HeroSect() {
         </div>
       </div>
       {/* fourth section */}
-      <div className="h-[330px] relative bg-blue-950">
+      <div className="h-[330px] relative mt-20 md:mt-0 bg-blue-950">
         <img
           src={mage3}
           alt="stricly pic"
