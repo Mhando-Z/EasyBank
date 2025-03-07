@@ -99,8 +99,12 @@ function HeroSect() {
                 type="text"
                 className="w-full py-2"
               />
-              <button className="py-2 font-bold text-white px-7 bg-cyan-400">
-                search
+
+              <button
+                onClick={handleSubmit}
+                className="py-2 font-bold text-white md:w-44 px-7 bg-cyan-400"
+              >
+                Shorten It!
               </button>
             </div>
             {!url && (
