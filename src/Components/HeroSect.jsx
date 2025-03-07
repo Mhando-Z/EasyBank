@@ -16,8 +16,8 @@ function HeroSect() {
         {/* first section */}
         <div className="flex flex-col-reverse items-center justify-between md:flex-row ">
           {/* text section */}
-          <div className="flex flex-col w-full ">
-            <h1 className="max-w-md text-4xl font-bold md:text-6xl ">
+          <div className="flex flex-col w-full mt-10 text-center md:text-left ">
+            <h1 className="max-w-md text-5xl font-bold md:text-6xl ">
               More than just shorter links
             </h1>
             <p className="max-w-md mt-3 text-gray-400">
