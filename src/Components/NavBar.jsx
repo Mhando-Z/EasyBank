@@ -47,6 +47,7 @@ function NavBar() {
               <button className="font-semibold hover:font-bold">
                 Resources
               </button>
+              <div className="w-full border border-gray-400"></div>
               <button className="font-semibold hover:font-bold">Login</button>
               <button className="py-1.5 px-4 bg-cyan-600 text-white font-bold rounded-3xl">
                 Sign Up
