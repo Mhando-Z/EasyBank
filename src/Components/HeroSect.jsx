@@ -43,7 +43,7 @@ function HeroSect() {
             className="object-cover h-full rounded outline-none "
           />
           <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center ">
-            <div className="flex flex-col w-full gap-3 px-10 md:flex-row md:items-center">
+            <div className="flex flex-col w-full gap-3 px-5 md:px-10 md:flex-row md:items-center">
               <input type="text" className="w-full py-2" />
               <button className="py-2 font-bold text-white px-7 bg-cyan-400">
                 search
