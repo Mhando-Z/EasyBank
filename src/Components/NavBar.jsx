@@ -27,7 +27,7 @@ function NavBar() {
         </div>
         {/* nav links */}
         <div className="items-center hidden md:flex gap-x-4">
-          <button className="px-4 py-2 font-bold text-white bg-cyan-600 rounded-3xl">
+          <button className="px-4 py-2 font-bold text-white bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl">
             Request invite
           </button>
         </div>
