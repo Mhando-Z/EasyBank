@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 // image import
 import mage from "../../src/assets/images/bg-intro-desktop.svg";
 import mage2 from "../../src/assets/images/image-mockups.png";
+import restaurant from "../../src/assets/images/image-restaurant.jpg";
+import plane from "../../src/assets/images/image-plane.jpg";
+import currency from "../../src/assets/images/image-currency.jpg";
+import conffety from "../../src/assets/images/image-confetti.jpg";
 
 function HeroSect() {
   const simpleBudget = [
@@ -29,6 +33,38 @@ function HeroSect() {
       discription:
         " your savings, investments, pension, and much more from one account. Tracking your money has never been easier.",
       icon: "",
+    },
+  ];
+
+  // article object
+  const articles = [
+    {
+      title: "Receive money in any currency with no fees",
+      description:
+        "  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …",
+      author: "By Claire Robinson",
+      image: currency,
+    },
+    {
+      title: "Treat yourself without worrying about money",
+      description:
+        "  Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …",
+      author: "By Wilson Hutton",
+      image: restaurant,
+    },
+    {
+      title: "Take your Easybank card wherever you go We want",
+      description:
+        "  you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you … ",
+      author: "By Wilson Hutton",
+      image: plane,
+    },
+    {
+      title: "Our invite-only Beta accounts are now live!",
+      description:
+        "  After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site ...",
+      author: "By Claire Robinson",
+      image: conffety,
     },
   ];
   return (
@@ -84,7 +120,7 @@ function HeroSect() {
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {simpleBudget?.map((dt, inde) => {
                 return (
-                  <div className="flex flex-col gap-5">
+                  <div key={inde} className="flex flex-col gap-5">
                     {/* icon section */}
                     <div className="rounded-full bg-gradient-to-r from-green-400 to-blue-400 size-16"></div>
                     {/* text section */}
@@ -100,9 +136,34 @@ function HeroSect() {
         </div>
       </div>
       {/* Articles section */}
-      <div className="h-[600px]">
+      <div className="h-[650px]">
         <div className="flex flex-col px-4 mt-20 md:container md:mx-auto md:px-0">
           <h1 className="text-4xl">Latest Articles</h1>
+          {/* articles grids */}
+          <div className="grid grid-cols-1 gap-5 mt-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {articles?.map((dt, inde) => {
+              return (
+                <div key={inde} className="flex flex-col gap-3">
+                  {/* image section */}
+                  <div>
+                    <img
+                      src={dt.image}
+                      alt={dt.title}
+                      className="object-cover h-[250px] w-full"
+                    />
+                  </div>
+                  {/* text section */}
+                  <div className="flex flex-col gap-2 px-10">
+                    <p className="text-xs text-gray-300">{dt.author}</p>
+                    <h1 className="text-xl text-gray-600 cursor-pointer hover:text-green-400">
+                      {dt.title}
+                    </h1>
+                    <p className="text-gray-400">{dt.description}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </motion.div>
