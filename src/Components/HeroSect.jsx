@@ -105,12 +105,12 @@ function HeroSect() {
         ></div>
       </motion.div>
       {/* second section */}
-      <div className=" bg-gray-100 lg:h-[700px] md:h-[1200px]">
+      <div className=" bg-gray-100 lg:h-[700px] h-[1300px] md:h-[1200px]">
         <div className="flex flex-col px-4 md:container md:mx-auto md:px-0">
           {/* mobile view */}
-          <motion.div className="flex flex-col max-w-lg mt-56 md:mt-20 lg:hidden gap-y-3 ">
-            <h1 className="max-w-md text-5xl font-thin text-center lg:text-6xl md:text-left">
-              Next generation digital banking{" "}
+          <motion.div className="flex flex-col mt-56 md:max-w-lg md:mt-20 lg:hidden gap-y-3 ">
+            <h1 className="max-w-md text-5xl font-thin lg:text-6xl md:text-left">
+              Next generation digital banking
             </h1>
             {/* paragraph */}
             <p className="max-w-md mt-3 mb-2 text-gray-400">
