@@ -105,7 +105,7 @@ function HeroSect() {
         ></div>
       </motion.div>
       {/* second section */}
-      <div className=" bg-gray-100 lg:h-[700px] h-[1300px] md:h-[1200px]">
+      <div className=" bg-gray-100 lg:h-[700px] sm:h-[1300px] h-[1800px] md:h-[1200px]">
         <div className="flex flex-col px-4 md:container md:mx-auto md:px-0">
           {/* mobile view */}
           <motion.div className="flex flex-col mt-56 md:max-w-lg md:mt-20 lg:hidden gap-y-3 ">
