@@ -154,7 +154,7 @@ function HeroSect() {
         </div>
       </div>
       {/* Articles section */}
-      <div className="h-[650px]">
+      <div className="lg:h-[650px] h-[1100px]">
         <div className="flex flex-col px-4 mt-20 md:container md:mx-auto md:px-0">
           <h1 className="text-4xl">Latest Articles</h1>
           {/* articles grids */}
