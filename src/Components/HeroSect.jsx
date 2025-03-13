@@ -79,7 +79,7 @@ function HeroSect() {
         className="w-full h-[700px] mt-20 bg-no-repeat bg-contain bg-right relative"
       >
         <div className="container absolute top-0 bottom-0 left-0 right-0 flex flex-col mx-auto md:flex-row">
-          <motion.div className="flex flex-col max-w-lg gap-y-3 xl:mt-72 md:mt-72">
+          <motion.div className="flex-col hidden max-w-lg lg:flex gap-y-3 xl:mt-72 md:mt-72">
             <h1 className="text-5xl font-thin text-center lg:text-6xl md:text-left">
               Next generation digital banking{" "}
             </h1>
@@ -105,8 +105,26 @@ function HeroSect() {
         ></div>
       </motion.div>
       {/* second section */}
-      <div className=" bg-gray-100 h-[700px]">
+      <div className=" bg-gray-100 lg:h-[700px] md:h-[1200px]">
         <div className="flex flex-col px-4 md:container md:mx-auto md:px-0">
+          {/* mobile view */}
+          <motion.div className="flex flex-col max-w-lg mt-56 md:mt-20 lg:hidden gap-y-3 ">
+            <h1 className="max-w-md text-5xl font-thin text-center lg:text-6xl md:text-left">
+              Next generation digital banking{" "}
+            </h1>
+            {/* paragraph */}
+            <p className="max-w-md mt-3 mb-2 text-gray-400">
+              Take your financial life online. Your Easybank account will be a
+              one-stop-shop for spending, saving, budgeting, investing, and much
+              more
+            </p>
+            {/* invite button */}
+            <div>
+              <button className="py-2 font-bold text-white px-7 bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl ">
+                Request invite
+              </button>
+            </div>
+          </motion.div>
           {/* text section */}
           <div className="flex flex-col gap-5 mt-28">
             <h1 className="text-4xl ">Why choose Easybank? </h1>
