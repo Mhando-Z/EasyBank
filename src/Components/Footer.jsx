@@ -9,9 +9,8 @@ import log from "../assets/images/logo.svg";
 
 const Footer = () => {
   const menuItems = {
-    Features: ["Link Shortening", "Branded Links", "Analytics"],
-    Resources: ["Blog", "Developers", "Support"],
-    Company: ["About", "Our Team", "Careers", "Contact"],
+    AboutUs: ["Contacts", "Blog"],
+    career: ["support", "Privacy policy"],
   };
 
   return (
@@ -77,35 +76,16 @@ const Footer = () => {
 
         {/* Social Icons */}
         <div className="flex items-center justify-center gap-4 mt-8 md:items-start md:justify-start md:mt-0">
-          <a
-            href="#facebook"
-            className="transition-colors duration-200 hover:text-blue-400"
-          >
-            <img src={logo} alt="fb" />
-            <span className="sr-only">Facebook</span>
-          </a>
-          <a
-            href="#twitter"
-            className="transition-colors duration-200 hover:text-blue-400"
-          >
-            <img src={logo2} alt="fb" />
-
-            <span className="sr-only">Twitter</span>
-          </a>
-          <a
-            href="#pinterest"
-            className="transition-colors duration-200 hover:text-red-400"
-          >
-            <img src={logo3} alt="fb" />
-            <span className="sr-only">Pinterest</span>
-          </a>
-          <a
-            href="#instagram"
-            className="transition-colors duration-200 hover:text-pink-400"
-          >
-            <img src={logo1} alt="fb" />
-            <span className="sr-only">Instagram</span>
-          </a>
+          <div className="flex flex-col items-center gap-7 md:items-end">
+            <div>
+              <button className="py-2 font-bold text-white px-7 bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl ">
+                Request invite
+              </button>
+            </div>
+            <div className="text-center ">
+              <p className="text-gray-400 ">© Easybank. All Rights Reserved</p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
