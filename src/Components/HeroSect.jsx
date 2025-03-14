@@ -140,7 +140,7 @@ function HeroSect() {
                 return (
                   <div
                     key={inde}
-                    className="flex flex-col items-center gap-5 text-center"
+                    className="flex flex-col items-center gap-5 text-center sm:items-start sm:text-left"
                   >
                     {/* icon section */}
                     <div className="rounded-full bg-gradient-to-r from-green-400 to-blue-400 size-16"></div>
