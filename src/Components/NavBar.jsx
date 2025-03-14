@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/images/logo.svg";
 // icon import
 import { IoMdMenu } from "react-icons/io";
+import inconClose from "../assets/images/icon-close.svg";
 
 function NavBar() {
   const [show, setShow] = React.useState(false);
@@ -33,7 +34,16 @@ function NavBar() {
         </div>
         {/* humbuger icon */}
         <div className="md:hidden">
-          <IoMdMenu onClick={handleClick} className="text-3xl md:hidden" />
+          {show ? (
+            <img
+              src={inconClose}
+              alt="close"
+              className="py-1"
+              onClick={handleClick}
+            />
+          ) : (
+            <IoMdMenu onClick={handleClick} className="text-3xl md:hidden" />
+          )}
         </div>
 
         {/* mobile nav */}
