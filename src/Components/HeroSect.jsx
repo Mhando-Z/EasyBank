@@ -7,6 +7,10 @@ import restaurant from "../../src/assets/images/image-restaurant.jpg";
 import plane from "../../src/assets/images/image-plane.jpg";
 import currency from "../../src/assets/images/image-currency.jpg";
 import conffety from "../../src/assets/images/image-confetti.jpg";
+import iconhumber from "../../src/assets/images/icon-api.svg";
+import iconOnbording from "../../src/assets/images/icon-onboarding.svg";
+import iconOnline from "../../src/assets/images/icon-online.svg";
+import iconBugdetig from "../../src/assets/images/icon-budgeting.svg";
 
 function HeroSect() {
   const simpleBudget = [
@@ -14,25 +18,25 @@ function HeroSect() {
       title: "Online Banking ",
       discription:
         " Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.",
-      icon: "",
+      icon: iconOnline,
     },
     {
       title: "Simple Budgeting ",
       discription:
         "See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.",
-      icon: "",
+      icon: iconBugdetig,
     },
     {
       title: "Fast Onboarding",
       discription:
         " We don’t do branches. Open your account in minutes online and start taking control of your finances right away.",
-      icon: "",
+      icon: iconOnbording,
     },
     {
       title: "Open API Manage",
       discription:
         " your savings, investments, pension, and much more from one account. Tracking your money has never been easier.",
-      icon: "",
+      icon: iconhumber,
     },
   ];
 
@@ -143,7 +147,9 @@ function HeroSect() {
                     className="flex flex-col items-center gap-5 text-center sm:items-start sm:text-left"
                   >
                     {/* icon section */}
-                    <div className="rounded-full bg-gradient-to-r from-green-400 to-blue-400 size-16"></div>
+                    <div className="rounded-full bg-gradient-to-r from-green-400 to-blue-400 size-16">
+                      <img src={dt.icon} alt="icon" className="object-cover" />
+                    </div>
                     {/* text section */}
                     <div className="flex flex-col gap-5">
                       <h1>{dt.title}</h1>
