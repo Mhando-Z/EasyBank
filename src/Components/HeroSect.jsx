@@ -135,10 +135,13 @@ function HeroSect() {
           </div>
           {/* card section */}
           <div className="flex flex-col px-4 mt-20 md:container md:mx-auto md:px-0">
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {simpleBudget?.map((dt, inde) => {
                 return (
-                  <div key={inde} className="flex flex-col gap-5">
+                  <div
+                    key={inde}
+                    className="flex flex-col items-center gap-5 text-center"
+                  >
                     {/* icon section */}
                     <div className="rounded-full bg-gradient-to-r from-green-400 to-blue-400 size-16"></div>
                     {/* text section */}
