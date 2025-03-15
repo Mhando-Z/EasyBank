@@ -82,7 +82,7 @@ function HeroSect() {
         }}
         className="w-full h-[700px] mt-20 bg-no-repeat bg-contain bg-right relative"
       >
-        <div className="container absolute top-0 bottom-0 left-0 right-0 flex flex-col mx-auto md:flex-row">
+        <div className="container absolute top-0 bottom-0 left-0 right-0 flex flex-col md:flex-row">
           <motion.div className="flex-col hidden max-w-lg lg:flex gap-y-3 xl:mt-72 md:mt-72">
             <h1 className="text-5xl font-thin text-center lg:text-6xl md:text-left">
               Next generation digital banking{" "}
